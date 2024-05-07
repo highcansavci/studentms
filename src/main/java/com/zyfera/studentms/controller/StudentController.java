@@ -22,7 +22,7 @@ public class StudentController {
     private StudentService studentService;
 
     @PostMapping
-    public ResponseEntity<String> createJob(@RequestBody Student student) {
+    public ResponseEntity<String> createStudent(@RequestBody Student student) {
         Map<String, HttpStatus> responseMap = studentService.createStudent(student);
         Map.Entry<String, HttpStatus> responseEntry = responseMap.entrySet().iterator().next();
         log.info("Create student operation is done in the controller layer.");
